@@ -4,8 +4,8 @@ namespace PokemonServer.Models.Pokemons
 {
     public class Pakahdu : Pokemon
     {
-        public Pakahdu(string name, uint power)
-            : base(name, power)
+        public Pakahdu(uint power)
+            : base(power)
         {
         }
 

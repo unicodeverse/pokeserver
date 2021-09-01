@@ -6,10 +6,19 @@
     /// </summary>
     public abstract class Pokemon
     {
+        public const uint MAX_POWER = 10000;
+        public const uint MIN_POWER = 1;
+
         /// <summary>
         /// Name of the pokemon.
         /// </summary>
-        public string Name { get; private set; }
+        public string Name
+        {
+            get
+            {
+                return GetPokemonType().ToString();
+            }
+        }
 
         /// <summary>
         /// Presents the attack power and the overall power of the pokemon.
@@ -25,11 +34,9 @@
         /// <summary>
         /// Creates new pokemon instance.
         /// </summary>
-        /// <param name="name">Name of the pokemon.</param>
         /// <param name="power">Overall power of the pokemon.</param>
-        public Pokemon(string name, uint power)
+        public Pokemon(uint power)
         {
-            Name = name;
             Power = power;
         }
 
